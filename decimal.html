@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora MultiBase</title>
+        <link rel="stylesheet" href="calculadora.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+
+<body>
+  
+    <!-- Barra no topo -->
+    <div class="rodape-calculadora">
+        <h1>CALCULADORA  MULTIBASE</h1>
+
+        <div class="botoes_indexes">
+        <button onclick="arquivoOctal()"> OCTAL</button>
+        <button onclick="arquivoHexadecimal()">HEXADECIMAL</button>
+        <button onclick="arquivoBinario()">BINARIO</button>
+        </div>
+    <center>
+ 
+            <h3>INSIRA UM NÚMERO DECIMAL</h3> 
+            <input id="input_decimal" type="text">
+            <h4>CONVERTER PARA</h4>
+            <!-- Início da lista de conversão, ul = lista não ordenada-->
+            <ul class="conversao-lista">
+                <!-- Itens da lista-->
+                <input onclick="calcOctal()" type="checkbox"> <b>OCTAL </b>  <h3 id="resultado_octal"></h3><br> 
+                
+                <input onclick="calcHexadecimal()" type="checkbox"> <b>HEXADECIMAL</b>  <h3 id="resultado_hexadecimal"></h3><br>
+                
+                <input onclick="calcBinario()" type="checkbox"> <b>BINÁRIO</b>  <h3 id="resultado_binario"></h3><br>
+            </ul>
+
+        </div>
+    </center>
+
+
+    <script>
+
+        function calcBinario(){
+            
+            resultado_binario.innerHTML = "";
+
+            let inputUsuario = Number(input_decimal.value);
+
+            let binario = (inputUsuario).toString(2);
+            
+            resultado_binario.innerHTML += `${binario}`;
+                
+            }
+           
+    
+        function calcOctal(){
+
+            resultado_octal.innerHTML = "";
+
+            let inputUsuario = Number(input_decimal.value);
+                  
+            let octal= (inputUsuario).toString(8);
+
+            resultado_octal.innerHTML += `${octal}`;
+
+        }
+
+        function calcHexadecimal(){
+
+            resultado_hexadecimal.innerHTML = "";
+
+            let inputUsuario = Number(input_decimal.value);
+
+            let hexadecimal = (inputUsuario).toString(16);
+
+            resultado_hexadecimal.innerHTML += `${hexadecimal}`;
+        }
+
+
+        function arquivoOctal(){
+
+            window.location.href="octal.html";
+        }
+
+        function arquivoBinario(){
+
+            window.location.href="binario.html";
+            
+        }
+        function arquivoHexadecimal(){
+
+            window.location.href="hexadecimal.html";
+        }
+        
+    </script>
+
+</body>
+</html>

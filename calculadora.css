@@ -1,0 +1,54 @@
+body {
+    font-family: 'Arial', sans-serif; /*Define a fonte como 'Arial' */
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(to right ,#1200ff, #00e5aa);
+}
+
+.barra-topo {
+    background-color:  white;
+    color: black;
+    padding: 20px;
+    margin: auto;
+    width: 350px;
+    text-align: center;
+}
+
+.rodape-calculadora {
+    background-color: rgb(209, 209, 212);
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    padding: 20px;
+    text-align: center;
+    margin: auto; /* Centraliza o elemento horizontalmente */
+    width: 400px; /* Define a largura máxima do elemento */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.botoes_indexes {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.botoes_indexes button {
+    background-color: #308dbf; 
+    border: none;             
+    padding: 10px 20px;        
+    text-align: center;           
+    display: inline-block;     
+    font-size: 16px;          
+    margin: 5px;               
+    border-radius: 8px;        
+
+}
+
+.botoes_indexes button:hover {
+    background-color: #00e5aa;  
+}
+
+.conversao-lista {
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 0;
+    border-radius: 50px;
+}
+
